@@ -41,6 +41,10 @@ public class ObjectMenuManager : MonoBehaviour {
                     objectList[currentObject].transform.position,
                     objectList[currentObject].transform.rotation); 
     }
+    public void SetActiveCurrentObject(bool active)
+    {
+        objectList[currentObject].SetActive(active);
+    }
 	// Update is called once per frame
 	void Update () {
 		

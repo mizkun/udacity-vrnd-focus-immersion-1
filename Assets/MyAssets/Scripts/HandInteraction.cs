@@ -27,6 +27,7 @@ public class HandInteraction : MonoBehaviour {
         if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Touchpad))
         {
             touchLast = device.GetAxis(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad).x;
+            ToggleSelect(true);
         }
         if (device.GetTouch(SteamVR_Controller.ButtonMask.Touchpad))
         {
@@ -62,6 +63,7 @@ public class HandInteraction : MonoBehaviour {
             touchLast = 0;
             hasSwipedLeft = false;
             hasSwipedRight = false;
+            ToggleSelect(false);
         }
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)){
             SpawnObject();
@@ -79,6 +81,11 @@ public class HandInteraction : MonoBehaviour {
     {
         objectMenuManager.SpawnCurrentObject();
     }
+    void ToggleSelect (bool active)
+    {
+        objectMenuManager.SetActiveCurrentObject(active);
+    }
+
     private void OnTriggerStay(Collider col)
     {
         if (col.gameObject.CompareTag("Throwable")) 
