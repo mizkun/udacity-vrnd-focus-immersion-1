@@ -88,6 +88,7 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
+'Assets/MyAssets/Prefabs/RubeGoldbergs/FanHandler.cs'
 'Assets/MyAssets/Prefabs/RubeGoldbergs/ReverseHandler.cs'
 'Assets/MyAssets/Prefabs/RubeGoldbergs/TrampolineHandler.cs'
 'Assets/MyAssets/Scripts/BallReset.cs'

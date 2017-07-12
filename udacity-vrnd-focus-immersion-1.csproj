@@ -110,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MyAssets\Prefabs\RubeGoldbergs\FanHandler.cs" />
     <Compile Include="Assets\MyAssets\Prefabs\RubeGoldbergs\ReverseHandler.cs" />
     <Compile Include="Assets\MyAssets\Prefabs\RubeGoldbergs\TrampolineHandler.cs" />
     <Compile Include="Assets\MyAssets\Scripts\BallReset.cs" />
