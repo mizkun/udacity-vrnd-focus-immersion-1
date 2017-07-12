@@ -99,6 +99,17 @@ public class HandInteraction : MonoBehaviour {
                 GrabObject(col);
             }
         }
+		if (col.gameObject.CompareTag("Structure"))
+		{
+			if (device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
+			{
+				PutObject(col);
+			}
+			else if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+			{
+				GrabObject(col);
+			}
+		}
     }
 
     void GrabObject (Collider coli)
@@ -116,4 +127,9 @@ public class HandInteraction : MonoBehaviour {
         rigidBody.velocity = device.velocity * throwForce;
         rigidBody.angularVelocity = device.angularVelocity;
 	}
+
+    void PutObject (Collider coli) 
+    {
+		coli.transform.SetParent(null);
+    }
 }
