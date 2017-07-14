@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 121
+  controlID: 93
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 122
+  controlID: 94
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_MinSize: {x: 481, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 73
+  controlID: 70
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_MinSize: {x: 481, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 74
+  controlID: 71
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,8 +276,8 @@ MonoBehaviour:
     y: 0
     width: 709
     height: 505
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -442,14 +442,14 @@ MonoBehaviour:
     width: 727
     height: 453
   m_SceneLighting: 1
-  lastFramingTime: 547.507118999958
+  lastFramingTime: 747.5157050490379
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.68652344, y: 1.7711786, z: -2.655655}
+    m_Target: {x: 0.038772583, y: 1.3869019, z: -0.91674805}
     speed: 2
-    m_Value: {x: 0.68652344, y: 1.7711786, z: -2.655655}
+    m_Value: {x: 0.038772583, y: 1.3869019, z: -0.91674805}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -472,13 +472,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.2030225, y: 0.62769705, z: -0.1743275, w: 0.73102003}
+    m_Target: {x: 0.5207394, y: 0.13003378, z: -0.08062144, w: 0.83989424}
     speed: 2
-    m_Value: {x: 0.20302251, y: 0.6276971, z: -0.17432751, w: 0.73102003}
+    m_Value: {x: 0.52073926, y: 0.13003375, z: -0.08062142, w: 0.83989406}
   m_Size:
-    m_Target: 5.7476892
+    m_Target: 2.4330006
     speed: 2
-    m_Value: 5.7476892
+    m_Value: 2.4330006
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -543,9 +543,9 @@ MonoBehaviour:
     height: 484
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 70280000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00c4ffffdcfbffff00000000
+    m_SelectedIDs: 9ed9fdff
+    m_LastClickedID: -140898
+    m_ExpandedIDs: 984bfdffcaa7fdff9ed9fdffbeceffff2ce7ffffe8f8ffff48f9ffff98f9ffffcaf9ffffaafaffffccfaffffbafbffffc8fbffffdcfbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -664,18 +664,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/MyAssets/Prefabs/RubeGoldbergs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/MyAssets/Prefabs/RubeGoldbergs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: /Users/kyohei/PG/Unity/VRND/udacity-vrnd-focus-immersion-1
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a0280000
-    m_LastClickedID: 10400
+    m_SelectedIDs: 4e2a0000
+    m_LastClickedID: 10830
     m_ExpandedIDs: 00000000a0250000b8280000562a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
