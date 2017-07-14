@@ -5,11 +5,13 @@ using UnityEngine;
 public class BallHandler : MonoBehaviour
 {
     public StarHandler starHandler;
+    public bool isInPlayArea;
+    public Canvas alert;
 
     // Use this for initialization
     void Start()
     {
-
+		isInPlayArea = true;
     }
 
     // Update is called once per frame
@@ -42,12 +44,27 @@ public class BallHandler : MonoBehaviour
         }
     }
 
-    void ReStart () {
+    private void OnTriggerExit(Collider col)
+    {
+		if (col.gameObject.CompareTag("PlayArea"))
+		{
+            isInPlayArea = false;
+		}
+    }
+
+    public bool IsInPlayArea () 
+    {
+        return isInPlayArea;
+    }
+
+    public void ReStart () {
+        transform.SetParent(null);
 		transform.position = new Vector3(0, 1.15f, -2.6f);
 		Rigidbody rigidBody = transform.GetComponent<Rigidbody>();
 		rigidBody.velocity = Vector3.zero;
 		rigidBody.angularVelocity = Vector3.zero;
 		rigidBody.isKinematic = false;
 		starHandler.ReStart();
+        isInPlayArea = true;
     }
 }

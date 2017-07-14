@@ -7,6 +7,9 @@ public class HandInteraction : MonoBehaviour {
     private SteamVR_Controller.Device device;
     public float throwForce = 1.5f;
 
+    public BallHandler ballHandler;
+    public Canvas alert;
+
     //Swipe
     public float swipeSum;
     public float touchLast;
@@ -90,9 +93,18 @@ public class HandInteraction : MonoBehaviour {
     {
         if (col.gameObject.CompareTag("Throwable")) 
         {
+            if (!ballHandler.IsInPlayArea())
+            {
+				ballHandler.ReStart();
+                alert.gameObject.SetActive(true);
+                Invoke("RemoveAlert", 5.0f);
+            }
             if (device.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
             {
-                ThrowObject(col);
+                if (ballHandler.IsInPlayArea()) 
+                {
+					ThrowObject(col);
+                } 
             } 
             else if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
             {
@@ -112,8 +124,13 @@ public class HandInteraction : MonoBehaviour {
 		}
     }
 
+    void RemoveAlert () {
+        alert.gameObject.SetActive(false);
+    }
+
     void GrabObject (Collider coli)
     {
+		coli.transform.SetParent(null);
 		coli.transform.SetParent(gameObject.transform);
 		coli.GetComponent<Rigidbody>().isKinematic = true;
         device.TriggerHapticPulse(2000);
