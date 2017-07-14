@@ -30,7 +30,10 @@ public class HandInteraction : MonoBehaviour {
         if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Touchpad))
         {
             touchLast = device.GetAxis(Valve.VR.EVRButtonId.k_EButton_SteamVR_Touchpad).x;
-            ToggleSelect(true);
+            if (objectMenuManager.HasObject())
+            {
+				ToggleSelect(true);
+			}
         }
         if (device.GetTouch(SteamVR_Controller.ButtonMask.Touchpad))
         {
