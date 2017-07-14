@@ -7,17 +7,13 @@ public class BallHandler : MonoBehaviour
     public StarHandler starHandler;
     public bool isInPlayArea;
     public Canvas alert;
+    public GameObject startInstruction;
+    public string NextScene;
 
     // Use this for initialization
     void Start()
     {
 		isInPlayArea = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void OnTriggerEnter(Collider col)
@@ -35,12 +31,17 @@ public class BallHandler : MonoBehaviour
         {
             if (starHandler.IsCompleted())
             {
-                SteamVR_LoadLevel.Begin("ExampleScene");
+                SteamVR_LoadLevel.Begin(NextScene);
             }
             else 
             {
                 ReStart();
             }
+        }
+        else if (col.gameObject.CompareTag("StartLevel"))
+        {
+            ReStart();
+            startInstruction.SetActive(false);
         }
     }
 
