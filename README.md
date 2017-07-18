@@ -1,7 +1,17 @@
-# README #
+#1. Name
+Kyohei Mizutani
 
-This is the starter project for Rube Goldberg Challenge
+#2. Headset
+HTC Vive
 
-### What is this repository for? ###
+#3. How long it took to complete
+15 hours (3 weeks)
 
-* You should find everything you need in `VRND_C8A_ProjectAssetPack/Assets`
+#3. One thing I liked
+Working properly on macOS!!
+
+#4. One thing that was challenging about this project
+I created this game on macOS.
+Almost of all environments are beta, High Sierra (beta) + SteamVR (beta) + Unity (preview build) + eGPU (dev kit). Therefore, environment setup required tremendous works.
+
+
