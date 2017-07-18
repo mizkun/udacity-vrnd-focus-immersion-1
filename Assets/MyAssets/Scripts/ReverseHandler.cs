@@ -16,6 +16,6 @@ public class ReverseHandler : MonoBehaviour {
 	private void OnTriggerEnter(Collider col)
 	{
 		Rigidbody colRigidbody = col.GetComponent<Rigidbody>();
-        colRigidbody.velocity = -colRigidbody.velocity;
+        colRigidbody.velocity = -0.7f * colRigidbody.velocity;
 	}
 }

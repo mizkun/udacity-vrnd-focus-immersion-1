@@ -43,6 +43,10 @@ public class BallHandler : MonoBehaviour
             ReStart();
             startInstruction.SetActive(false);
         }
+        else if (col.gameObject.CompareTag("PlayArea"))
+        {
+            isInPlayArea = true;
+        }
     }
 
     private void OnTriggerExit(Collider col)
