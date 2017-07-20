@@ -72,14 +72,20 @@ public class HandControllerInput : MonoBehaviour {
                                     transform.forward,
                                     out hit, 15, laserMask))
                 {
-                    teleportLocation = hit.point;
-                    laser.SetPosition(1, teleportLocation);
-                    // Aimer Position
-                    teleportAimerObject.transform.position =
-                        new Vector3(
-                            teleportLocation.x,
-                            teleportLocation.y + yNudgeAmount,
-                            teleportLocation.z);
+                    teleportLocation = hit.point - transform.forward * 1.0f;
+					RaycastHit groundRay;
+                    if (Physics.Raycast(teleportLocation, -Vector3.up,
+                                        out groundRay, 17, laserMask))
+                    {
+                        teleportLocation =
+	                        new Vector3(
+	                            teleportLocation.x,
+	                            groundRay.point.y,
+	                            teleportLocation.z);  
+                    }
+					laser.SetPosition(1, teleportLocation);
+					teleportAimerObject.transform.position =
+	                    teleportLocation + new Vector3(0, yNudgeAmount, 0);
 				}
                 else
                 {
@@ -98,9 +104,9 @@ public class HandControllerInput : MonoBehaviour {
                             transform.forward.z * 15 + transform.position.z
                         );
                     }
-                    laser.SetPosition(1, teleportLocation);
-                    teleportAimerObject.transform.position =
-                        teleportLocation + new Vector3(0, yNudgeAmount, 0);
+					laser.SetPosition(1, teleportLocation);
+					teleportAimerObject.transform.position =
+						teleportLocation + new Vector3(0, yNudgeAmount, 0);
 
                 }
             }
